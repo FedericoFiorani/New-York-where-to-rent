@@ -3,6 +3,10 @@
 ## Motivation (research question)
 __insert here__
 
+## Data
+![AirB&B logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png)
+
+
 ## Contributors
 This is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/)
 
