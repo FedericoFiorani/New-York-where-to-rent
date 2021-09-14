@@ -1,5 +1,5 @@
 # dPrep_Group11 - change short title title
-__(Airbnb New York guide: Which is the most convenient neighborhood in the Big apple for you? And why?)__
+__Airbnb New York guide: Which is the most convenient neighborhood in the Big apple for you? And why?__
 ## Motivation (research question)
 New York is one of the biggest city in the world, and all of its neighborhoods have something unique to offer. So, how should someone decide where to book its airbnb accommodation? We want to generate a list of the most convenient areas of the city for booking a airbnb. We will compile different rankings, based on: the price, the quality and the two together. We will also distinguish two geographical levels: both the 5 boroughs (Manhattan, Brooklyn, Queens, Bronx and Staten Island), and the smaller neighborhood within those 5 areas.
 
