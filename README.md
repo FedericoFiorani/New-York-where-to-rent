@@ -1,4 +1,4 @@
-# dPrep_Group11 - change short title title
+# New York: where to rent
 __(long project title e.g. research question)__
 ## Motivation (research question)
 Motivate your research question or business problem. Clearly explain which problem is solved.
