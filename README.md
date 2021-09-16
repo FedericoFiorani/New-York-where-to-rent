@@ -1,4 +1,4 @@
-<<<<<<< main
+
 ## New York: where to rent
 __Airbnb New York guide: Which is the most convenient neighborhood in the Big apple for you? And why?__
 
@@ -25,6 +25,6 @@ New York is one of the biggest city in the world, and all of its neighbourhoods 
 This is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/)
 
 Members: [Federico Fiorani](https://github.com/FedericoFiorani), [Lorenzo Taddei](https://github.com/lorenzotaddei), [Marton Tomka](https://github.com/martontomka11), [Sabine Abrahamse](https://github.com/sabineabra), [Kevin 't Jong](https://github.com/kevintjong)
-=======
 
->>>>>>> main
+
+
