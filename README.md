@@ -6,8 +6,12 @@ __Airbnb New York guide: Which is the most convenient neighbourhood in the Big a
 New York is one of the biggest cities in the world, and all of its neighbourhoods have something unique to offer. For example, Manhattan shows the core of the city, but Brooklyn has some good secrets in store. So, how should someone decide where to book its Airbnb accommodation? The goal of this project is to generate a list of the most convenient areas of the city for booking an Airbnb. The five areas that will be used are Manhattan, Brooklyn, Queens, the Bronx and Staten Island. We will compile different rankings, based on price, quality and the two together (also known as the value-for-money concept). The project will be executed for both the 5 boroughs, and the smaller neighbourhood within those 5 areas.
 
 
-## Method and results
+## Method
+In the graphic below, the method of the project is visualized: 
 [![data-collection-project1.png](https://i.postimg.cc/NfX9Lzm0/data-collection-project1.png)](https://postimg.cc/pp2X6k0N)
+
+## Results
+(Provide results when ready)
 
 ## Repository overview
 (Provide an overview of the directory structure and files.)
