@@ -1,27 +1,18 @@
-#opening the raw data
-stwd('_____________')
+#Cleaning the data set
+#filtering out the variable not considered relevant for our analysis
 
-library(readr)
-newyork<-read_csv('listings.csv')
-View (newyork)
-summary(newyork)
-
-#cleaning the dataset
-
-#creating a new variable number of chacters in the 'description'
-newyork$n_character_in_desription <- nchar(newyork$description, type = "chars", allowNA = TRUE, keepNA = TRUE)
 library(dplyr)
-move_columns(newyork$n_character_in_desription, .after= newyork$description)
-iris <- iris %>% relocate(newyork$n_character_in_desription, .after =  newyork$description)
-newyork <- newyork(drop(76))
-newyork = subset(newyork, select = -c(75,n_character_in_desription) )
-newyork$n_character_in_desription[is.na(newyork$n_character_in_desription)] <- 0
 
+#filtering out the units that have less than 3 reviews. The average rating is going to be our dependent variable so we need it to be accurate for all the units.
+ny_df <- subset(ny_df, ny_df$number_of_reviews >3)
+View(ny_df)
 
-#create the variable number of days since host
-summary(newyork$host_since)
-startdate <- as.Date("01-01-2000","%d-%m-%Y")
-newyork$host_since <- as.Date(newyork$host_since,"%Y-%m/-%d")
-startdate <- as.Date('2021-09-27')
-newyork$n_days_host_since  <- (-1)*(difftime(newyork$host_since,startdate ,units="days"))
+#filtering out inactive profiles: by canceling airbnbs that haven't been reviewed since 2016-09-29 (last 5 percentiles)
+ny_df$last_review <- as.Date(ny_df$last_review,"%Y-%m/-%d")
+ny_df$n_days_last_review <- as.numeric((-1)*(difftime(ny_df$last_review,startdate)))
+hist(ny_df$n_days_last_review)
+deciles_last_review_days <- quantile(ny_df$n_days_last_review, probs = seq(.05, .95, by = .05))
+deciles_last_review_days
+ny_df <- subset(ny_df, ny_df$n_days_last_review <1824)
 
+#the data frame cleaned is called 'ny_df' now
