@@ -1,3 +1,4 @@
+# Load the package to read .csv files
 library(readr)
 
 # Load listings data in R and summarize the variables
