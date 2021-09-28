@@ -18,7 +18,7 @@ for (f in files) {
 }
 
 #Viewing data in R
-listings <- read_csv("listings.csv")
+ny_df <- read_csv("listings.csv")
 View(listings)
 
 calendar <- read_csv("calendar.csv")
