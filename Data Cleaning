@@ -1,0 +1,27 @@
+#opening the raw data
+stwd('_____________')
+
+library(readr)
+newyork<-read_csv('listings.csv')
+View (newyork)
+summary(newyork)
+
+#cleaning the dataset
+
+#creating a new variable number of chacters in the 'description'
+newyork$n_character_in_desription <- nchar(newyork$description, type = "chars", allowNA = TRUE, keepNA = TRUE)
+library(dplyr)
+move_columns(newyork$n_character_in_desription, .after= newyork$description)
+iris <- iris %>% relocate(newyork$n_character_in_desription, .after =  newyork$description)
+newyork <- newyork(drop(76))
+newyork = subset(newyork, select = -c(75,n_character_in_desription) )
+newyork$n_character_in_desription[is.na(newyork$n_character_in_desription)] <- 0
+
+
+#create the variable number of days since host
+summary(newyork$host_since)
+startdate <- as.Date("01-01-2000","%d-%m-%Y")
+newyork$host_since <- as.Date(newyork$host_since,"%Y-%m/-%d")
+startdate <- as.Date('2021-09-27')
+newyork$n_days_host_since  <- (-1)*(difftime(newyork$host_since,startdate ,units="days"))
+
