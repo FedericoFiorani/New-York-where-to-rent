@@ -4,14 +4,17 @@ library(readr)
 # Load listings data in R and summarize the variables
 listings_ny <- read_csv("data/listings_ny.csv")
 View(listings_ny)
-sumamry(listings_ny)
+summary(listings_ny)
 
 # Load reviews data in R and summarize the variables
 reviews_ny <- read_csv("data/reviews_ny.csv")
 View(reviews_ny)
 summary(reviews_ny)
 
-# Load neighborhood data in R and summarize the variables
-neighbourhoods_ny <- read_csv("data/neighbourhoods_ny.csv")
+# Load neighborhood data in R
+neighborhoods_ny <- read_csv("data/neighborhoods_ny.csv")
 View(neighbourhoods_ny)
-summary(neighbourhoods_ny)
+
+# Load detailed reviews data
+reviews_ny_detailed <- read_csv("data/reviews_ny_detailed.csv")
+View(reviews)
