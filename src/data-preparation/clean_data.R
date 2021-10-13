@@ -215,7 +215,7 @@ ny_lasso_raw <- ny_df[,c('id','host_response_rate','host_acceptance_rate','host_
                          ,'accommodates','bedrooms','beds','minimum_nights_avg_ntm','maximum_nights_avg_ntm','has_availability','availability_60','availability_365','number_of_reviews',
                          'review_scores_accuracy','review_scores_cleanliness','review_scores_checkin','review_scores_communication','review_scores_location','review_scores_value','calculated_host_listings_count'
                          ,'reviews_per_month','n_days_last_review','n_character_in_desription','n_days_host_since','n_characters_in_host_about','n_host_verifications','classes_property_type',
-                         'bathrooms_type','bathroom_number','n_amenities','amenities_Wifi','amenities_Backyard','amenities_TV','amenities_Washer','amenities_Dishwasher','amenities_AC','amenities_Breakfast','price_new','price_per_accomate')]
+                         'bathrooms_type','bathroom_number','n_amenities','amenities_Wifi','amenities_Backyard','amenities_TV','amenities_Washer','amenities_Dishwasher','amenities_AC','amenities_Breakfast','price_new','price_per_accomate','neighbourhood_cleansed','latitude','longitude')])]
 View(ny_lasso_raw)
 
 # Converting TRUE/FALSE into 1/0 (TRUE=1, FALSE=0), because Lasso regression can't process TRUE/FALSE format
