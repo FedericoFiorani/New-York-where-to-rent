@@ -1,0 +1,29 @@
+library(shiny)
+
+ny <- read.csv("ny_pre_app.csv")
+
+ui <- fluidPage(
+  sidebarLayout(
+    sidebarPanel(
+      h2("Where to rent in New York City?"),
+      selectInput(inputId = "neighbourhood", label = "Neighbourhood", choices = levels(ny$neighbourhood_group_cleansed), multiple = TRUE, selected = c("Manhattan")),
+      checkboxGroupInput(inputId = "options", label = "Desired necessities on the spot", choices = c("amenities_Wifi", "amenities_Backyard", "amenities_TV", "amenities_Washer", "amenities_Dishwasher", "amenities_AC", "amineties_Breakfast")),
+      sliderInput(inputId = "pricerange", label = "PriceRange", min = min(ny$price_new), max = max(ny$price_new), value = c(2500, 7500)),
+      submitButton(text = "Search Options", icon = NULL),
+    ),
+    mainPanel(
+      DT::dataTableOutput(outputId = "Table"))
+  )
+)
+server <- function(input, output) {
+  filtered_data <- reactive({
+    subset(ny,
+           Neighbourhood %in% input$neighbourhood &
+             PriceRange >= input$pricerange[1] & PriceRange <= input$pricerange[2])})
+  output$table <- DT::renderDataTable({
+    df <- filtered_data()
+    df
+  })
+}
+
+shinyApp(ui = ui, server = server) 
