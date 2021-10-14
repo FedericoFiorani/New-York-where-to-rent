@@ -2,15 +2,21 @@
 ### CLEANING DATA ####
 ######################
 
+# Libraries used
 
-### Filtering out the variables not considered relevant for our analysis ###
 library(dplyr)
+library(stringr)
+
+
+
+#### Filtering out the variables not considered relevant for our purpose ####
 
 # Filtering out the units that have less than 3 reviews. The average rating is going to be our dependent variable so we need it to be accurate for all the units.
 ny_df <- subset(ny_df, ny_df$number_of_reviews >3)
 View(ny_df)
 
 # Filtering out inactive profiles: by canceling airbnbs that haven't been reviewed since 2016-09-29 (last 5 percentiles)
+startdate <- as.Date('2021-10-04')
 ny_df$last_review <- as.Date(ny_df$last_review,"%Y-%m/-%d")
 ny_df$n_days_last_review <- as.numeric((-1)*(difftime(ny_df$last_review,startdate)))
 hist(ny_df$n_days_last_review)
@@ -18,10 +24,25 @@ deciles_last_review_days <- quantile(ny_df$n_days_last_review, probs = seq(.05, 
 deciles_last_review_days
 ny_df <- subset(ny_df, ny_df$n_days_last_review <1824)
 
+# Price variable
+ny_df$price_new <-  as.factor(ny_df$price)
+ny_df$price_new <- as.numeric(gsub('[$,]', '', ny_df$price))
+
+# Understand the price
+ny_df$price_per_accomate <- ny_df$price_new/ny_df$accommodates
+sd(as.numeric(ny_df$price_per_accomate))
+
+ny_df$price_per_accomate <-  str_remove(ny_df$price_per_accomate, "^0+")
+
+# Filtering out those units for which price is zero and number of bed is N/A
+ny_df <- subset(ny_df, ny_df$price_new!=0)
+
 # The data frame cleaned is called 'ny_df' now
 
 
-### Variable respecification - creating new variables and filtering out irrelevant ones ### 
+
+
+#### Variable respecification - creating new variables  ####
 
 # Creating a new variable: number of characters in the 'description'
 ny_df$n_character_in_desription <- nchar(ny_df$description, type = "chars", allowNA = TRUE, keepNA = TRUE)
@@ -148,8 +169,8 @@ while (unit_b<20000){
 
 
 # Creating new variable: number of amenities
-library(stringr)
 ny_df$n_amenities <- str_count(ny_df$amenities, ',')
+
 
 # Creating new variables regarding specific amenities:
 
@@ -159,56 +180,38 @@ ny_df$amenities_Wifi <- (grepl('Wifi', ny_df$amenities, fixed = FALSE))
 # Backyard
 ny_df %>%
   count((grepl('Backyard', ny_df$amenities, fixed = FALSE)))
-
 ny_df$amenities_Backyard <- (grepl('Backyard', ny_df$amenities, fixed = FALSE))
 
 # TV
 ny_df %>%
   count((grepl('TV', ny_df$amenities, fixed = FALSE)))
-
 ny_df$amenities_TV <- (grepl('TV', ny_df$amenities, fixed = FALSE))
 
 # Washing machine
 ny_df %>%
   count((grepl('Washer', ny_df$amenities, fixed = FALSE)))
-
 ny_df$amenities_Washer <- (grepl('Washer', ny_df$amenities, fixed = FALSE))
 
 # Dishwasher
 ny_df %>%
   count((grepl('Dishwasher', ny_df$amenities, fixed = FALSE)))
-
 ny_df$amenities_Dishwasher <- (grepl('Dishwasher', ny_df$amenities, fixed = FALSE))
 
 # Air conditioning
 ny_df %>%
   count((grepl('Air conditioning', ny_df$amenities, fixed = FALSE)))
-
 ny_df$amenities_AC <- (grepl('Air conditioning', ny_df$amenities, fixed = FALSE))
 
 # Breakfast
 ny_df %>%
   count((grepl('Breakfast', ny_df$amenities, fixed = FALSE)))
-
 ny_df$amenities_Breakfast <- (grepl('Breakfast', ny_df$amenities, fixed = FALSE))
 
 
-### Data fitting for Lasso regression ###
 
-# Price variable
-ny_df$price_new <-  as.factor(ny_df$price)
-ny_df$price_new <- as.numeric(gsub('[$,]', '', ny_df$price))
 
-# Understand the price
-ny_df$price_per_accomate <- ny_df$price_new/ny_df$accommodates
-sd(as.numeric(ny_df$price_per_accomate))
+#### Data fitting for Lasso regression ####
 
-library("stringr")
-
-ny_df$price_per_accomate <-  str_remove(ny_df$price_per_accomate, "^0+")
-
-# Filtering out those units for which price is zero and number of bed is N/A
-ny_df <- subset(ny_df, ny_df$price_new!=0)
 
 # Selecting relevant variables (we need neighbourhood_group_cleansed instead of neighbourhood, because there are no N/A-s in that variable)
 ny_lasso_raw <- ny_df[,c('id','host_response_rate','host_acceptance_rate','host_is_superhost','host_total_listings_count','host_has_profile_pic','host_identity_verified','neighbourhood_group_cleansed'
