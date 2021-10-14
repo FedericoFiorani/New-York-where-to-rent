@@ -1,28 +1,45 @@
 library(shiny)
 
 ny <- read.csv("ny_pre_app.csv")
+ny$neighbourhood_group_cleansed <- as.factor(ny$neighbourhood_group_cleansed)
+ny$amenities_Wifi <- as.factor(ny$amenities_Wifi)
+ny$amenities_Backyard <- as.factor(ny$amenities_Backyard)
+ny$amenities_TV <- as.factor(ny$amenities_TV)
+ny$amenities_Washer <- as.factor(ny$amenities_Washer)
+ny$amenities_Dishwasher <- as.factor(ny$amenities_Dishwasher)
+ny$amenities_AC <- as.factor(ny$amenities_AC)
+ny$amenities_Breakfast <- as.factor(ny$amenities_Breakfast)
 
 ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       h2("Where to rent in New York City?"),
-      selectInput(inputId = "neighbourhood", label = "Neighbourhood", choices = levels(ny$neighbourhood_group_cleansed), multiple = TRUE, selected = c("Manhattan")),
-      checkboxGroupInput(inputId = "options", label = "Desired necessities on the spot", choices = c("amenities_Wifi", "amenities_Backyard", "amenities_TV", "amenities_Washer", "amenities_Dishwasher", "amenities_AC", "amineties_Breakfast")),
-      sliderInput(inputId = "pricerange", label = "PriceRange", min = min(ny$price_new), max = max(ny$price_new), value = c(2500, 7500)),
+      selectInput(inputId = "neighbourhood", 
+                  label = "Neighbourhood", 
+                  choices = levels(ny$neighbourhood_group_cleansed), 
+                  multiple = TRUE, 
+                  selected = ("Manhattan")),
+      checkboxGroupInput(inputId = "options", 
+                         label = "Necessities", 
+                         choices = c("amenities_Wifi", "amenities_Backyard", "amenities_TV", "amenities_Washer", "amenities_Dishwasher", "amenities_AC", "amineties_Breakfast")),
+      sliderInput(inputId = "pricerange", 
+                  label = "PriceRange", 
+                  min = min(ny$price_per_accomate), 
+                  max = max(ny$price_per_accomate), 
+                  value = c(2500, 7500)),
       submitButton(text = "Search Options", icon = NULL),
     ),
     mainPanel(
-      DT::dataTableOutput(outputId = "Table"))
+      DT::dataTableOutput(outputId = "table"))
   )
 )
 server <- function(input, output) {
   filtered_data <- reactive({
     subset(ny,
-           Neighbourhood %in% input$neighbourhood &
-             PriceRange >= input$pricerange[1] & PriceRange <= input$pricerange[2])})
+      neighbourhood_group_cleansed %in% input$neighbourhood &
+      price_per_accomate >= input$pricerange[1] & price_per_accomate <= input$pricerange[2])})
   output$table <- DT::renderDataTable({
-    df <- filtered_data()
-    df
+    filtered_data()
   })
 }
 
