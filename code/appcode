@@ -24,8 +24,8 @@ ui <- fluidPage(
                          choices = c("amenities_Wifi", "amenities_Backyard", "amenities_TV", "amenities_Washer", "amenities_Dishwasher", "amenities_AC", "amineties_Breakfast")),
       sliderInput(inputId = "pricerange", 
                   label = "PriceRange", 
-                  min = min(ny$price_new), 
-                  max = max(ny$price_new), 
+                  min = min(ny$price_per_accomate), 
+                  max = max(ny$price_per_accomate), 
                   value = c(2500, 7500)),
       submitButton(text = "Search Options", icon = NULL),
     ),
@@ -37,7 +37,7 @@ server <- function(input, output) {
   filtered_data <- reactive({
     subset(ny,
       neighbourhood_group_cleansed %in% input$neighbourhood &
-      price_new >= input$pricerange[1] & price_new <= input$pricerange[2])})
+      price_per_accomate >= input$pricerange[1] & price_per_accomate <= input$pricerange[2])})
   output$table <- DT::renderDataTable({
     filtered_data()
   })
