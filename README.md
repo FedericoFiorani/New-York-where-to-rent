@@ -22,7 +22,9 @@ In the graphic below, the method of the project is visualized:
 
 ## Used dataset
 For our analysis we used the data available for New York City on the InsideAirbnb website, which contained 36 724 listings for August 2021. Our aim was to work with the highest quality data possible, so prior to starting our analysis, we applied several data cleaning methods to the dataset: filtering out listings that have less than 3 reviews, inactive profiles, rows with too many NA’s and other listings that missed some of the vital information necessary for our analysis (for example price). After cleaning our data, we retained about half of the listings in our data (17 555 overall), all of which contained all the information that we needed for our analysis. The used listings are spread out geographically the following way:
+
 ![image](https://user-images.githubusercontent.com/89907077/137603123-af78443b-3c0b-4802-998d-e58c988ada7a.png)
+
 Based on the existing data, we also created several new variables: for example the availability of specific amenities (dishwasher, air conditioning, washing machine etc.), number of characters in the description of the Airbnb, number of days since the host became active, number of characters used by the host to describe himself, number of verifications of the host, class of property type, bathroom type, number of bathrooms.
 
 ## Results
