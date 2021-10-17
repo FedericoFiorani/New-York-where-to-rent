@@ -51,8 +51,11 @@ may look a positively correlated variable to the rating. This negative coefficie
 The third variable is #Number_of_amenities (coefficient = 0.1013019): The number of amenities is apparently strongly correlated to the ratings. This is interesting because the average number of amenities is 22.9 when the number of accomodates are below average, and this number increase to 27.4 when the accomodates are above the average (even if accomodates is a negatively correlated variable).
 
 ## Borough comparison by most relevant variables
+As mentioned above, the most relevant regressors in our intitial Lasso regression were the ratings that the customers accredited to the accommodation. Based on the average rating per borough, we summarized the differences between the boroughs in the barplots below. At first glance the differences may not seem significant, but considering that the worldwide average rating in Airbnb is 4.7 out of 5.0 stars, these ~0.05-0.1 differences provide insight regarding the differences of the borougs. Results show that Manhattan scores the lowest in four out of five review categories, while scoring highest on location review. One explanation for this could be the high competition and population density in Manhattan, compared to the other boroughs.
 
 <img width="615" alt="review_scores_ratings" src="https://user-images.githubusercontent.com/89907077/137620041-689247ed-f901-427d-9539-16ded3e4c7d0.PNG">
+
+We also summarized the differences between the boroughs regarding the host_is_superhost variable and the other most relevant variables, which are shown in the plots below.
 
 <img width="624" alt="other_ratings" src="https://user-images.githubusercontent.com/89907077/137620042-f59764cb-aae7-4dac-8262-dfc0f79e350e.PNG">
 
