@@ -27,8 +27,32 @@ For our analysis we used the data available for New York City on the InsideAirbn
 
 Based on the existing data, we also created several new variables: for example the availability of specific amenities (dishwasher, air conditioning, washing machine etc.), number of characters in the description of the Airbnb, number of days since the host became active, number of characters used by the host to describe himself, number of verifications of the host, class of property type, bathroom type, number of bathrooms.
 
-## Results
-(Provide results when ready)
+## Lasso regression used in the app
+For the application created in this project we used a Lasso regression. In this analysis the dependent variable is the general rating and as independent variables 34 other variables (all the one that could fit for the analysis from the raw dataset). As shown in the table below the regressors that had a higher coefficient were the other ratings that the customer gave to the accommodation: accuracy, communication, check-in and location. We consider those asvery relevant regressor so we decided to keep them in our analysis.
+
+<img width="412" alt="lasso_used_in_analysis" src="https://user-images.githubusercontent.com/89907077/137619617-42ae0f62-1e2a-46d1-957b-6fb10c6239fa.PNG">
+
+## A new lasso regression
+To allow further interpretation, we decided to run another regression where the ratings that were previously included in the X matrix (the matrix containing the independent variables)where not included.
+
+<img width="410" alt="lasso_without_ratings" src="https://user-images.githubusercontent.com/89907077/137619683-497c5b1d-865f-4ae0-b1e9-e302dccebcbd.PNG">
+
+As the second graph shows the most relevant variable is: “host_is_superhost”. Considering that one of the requirement to be a super host in the platform is to have a very rating score this can be seen as a confirmation that the regression is properly working. Other three negative coefficients appear to be quite relevant in our regression, but let’s look at them after removing the redundant variable “host_is_superhost”.
+
+![image](https://user-images.githubusercontent.com/89907077/137619754-f4b88952-26ae-487d-830d-0d27438c5b12.png)
+
+In this new analysis the three variable with a negative coefficients are still very relevant, but another variable is showing a strong relationship with the dependent variable. Let’ take a closer look at all of them. 
+
+The first variable is #accommodates (coefficient = -0.09691375): The mean across the dataset of accomodates is 2.9 . The average rating for the accommodation changes from 4.718 to 4.686 if the accomodates are below or above the average. It is in fact easier to take good care of a small Airbnb than a bigger one. 
+
+The second and the third variables are #availability_365 (coefficient = -0.1065575) #availability_60 (coefficient = -0.109564): Having full availability in the upcoming days
+may look a positively correlated variable to the rating. This negative coefficient can be interpreted as the host not carefully following its calendar and just leaving it always open in order to receive as many visitors as possible.
+
+The third variable is #Number_of_amenities (coefficient = 0.1013019): The number of amenities is apparently strongly correlated to the ratings. This is interesting because the average number of amenities is 22.9 when the number of accomodates are below average, and this number increase to 27.4 when the accomodates are above the average (even if accomodates is a negatively correlated variable).
+
+## Borough comparison by most relevant variables
+
+## Shiny app
 
 ## Repository overview
 (Provide an overview of the directory structure and files.)
