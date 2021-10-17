@@ -78,7 +78,7 @@ To execute this project, the following programs need to be installed:
 (Point interested users to any related literature and/or documentation.)
 
 ## About
-This is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/)
+This is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/) at Tilburg University
 
 Members: [Federico Fiorani](https://github.com/FedericoFiorani), [Lorenzo Taddei](https://github.com/lorenzotaddei), [Marton Tomka](https://github.com/martontomka11), [Sabine Abrahamse](https://github.com/sabineabra), [Kevin 't Jong](https://github.com/kevintjong)
 
