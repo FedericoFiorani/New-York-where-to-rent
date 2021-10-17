@@ -39,7 +39,7 @@ To allow further interpretation, we decided to run another regression where the 
 
 As the second graph shows the most relevant variable is: “host_is_superhost”. Considering that one of the requirement to be a super host in the platform is to have a very rating score this can be seen as a confirmation that the regression is properly working. Other three negative coefficients appear to be quite relevant in our regression, but let’s look at them after removing the redundant variable “host_is_superhost”.
 
-![image](https://user-images.githubusercontent.com/89907077/137619754-f4b88952-26ae-487d-830d-0d27438c5b12.png)
+<img width="299" alt="lasso_without_ratings_superhost" src="https://user-images.githubusercontent.com/89907077/137619964-ea8f0c60-b597-4c9b-a90c-872769593ac8.PNG">
 
 In this new analysis the three variable with a negative coefficients are still very relevant, but another variable is showing a strong relationship with the dependent variable. Let’ take a closer look at all of them. 
 
