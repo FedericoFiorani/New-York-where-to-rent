@@ -55,7 +55,7 @@ As mentioned above, the most relevant regressors in our intitial Lasso regressio
 
 <img width="615" alt="review_scores_ratings" src="https://user-images.githubusercontent.com/89907077/137620041-689247ed-f901-427d-9539-16ded3e4c7d0.PNG">
 
-We also summarized the differences between the boroughs regarding the host_is_superhost variable and the other most relevant variables, which are shown in the plots below.
+We also summarized the differences between the boroughs regarding the host_is_superhost variable and the other most relevant variables, which are shown in the plots below. The availability variables show that Brooklyn and Manhattan are by far the busiest and most frequently rented Airbnbs, while the proportion of superhosts among hosts, response rate, number of amenities available and number of accommodated guests are usually higher in other boroughs. 
 
 <img width="624" alt="other_ratings" src="https://user-images.githubusercontent.com/89907077/137620042-f59764cb-aae7-4dac-8262-dfc0f79e350e.PNG">
 
