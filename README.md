@@ -52,6 +52,10 @@ The third variable is #Number_of_amenities (coefficient = 0.1013019): The number
 
 ## Borough comparison by most relevant variables
 
+<img width="615" alt="review_scores_ratings" src="https://user-images.githubusercontent.com/89907077/137620041-689247ed-f901-427d-9539-16ded3e4c7d0.PNG">
+
+<img width="624" alt="other_ratings" src="https://user-images.githubusercontent.com/89907077/137620042-f59764cb-aae7-4dac-8262-dfc0f79e350e.PNG">
+
 ## Shiny app
 
 ## Repository overview
