@@ -1,9 +1,11 @@
+all: listings.csv ny_lasso_clean.csv ny_pre_app.csv
 
-all:
+listings.csv: download_data_directly.R
+	R --vanilla < download_data_directly.R
 
-targets: prerequisites
-	command
+ny_lasso_clean.csv: clean_data.R
+	R --vanilla < clean_data.R
 
-targets: prerequisites
-	command
+ny_pre_app.csv: analysis.R
+	 R --vanilla < analysis.R
 	
