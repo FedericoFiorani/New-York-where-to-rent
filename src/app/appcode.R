@@ -6,6 +6,8 @@
 # install.packages('shinyWidgets')
 # install.packages('shiny')
 
+#setwd()
+
 # -- Loading required libraries
 library(shiny) 
 library(shinyWidgets)
@@ -13,7 +15,14 @@ library(dplyr)
 library(readr)
 
 # -- Loading data
-ny_app <- read.csv("../data/ny_app.csv")
+ny_app <- read.csv("data/ny_app.csv")
+
+# -- You have to delete the first column before you run the app as well as recoding the neighborhood variable
+# -- Removing the first column
+# ny_app <- ny_app[c(-1)]
+
+# -- Recoding neighborhood variable to a factor variable
+ny_app$neighbourhood_group_cleansed <- as.factor(ny_app$neighbourhood_group_cleansed)
 
 # -- Code for the app
 ui <- fluidPage(
