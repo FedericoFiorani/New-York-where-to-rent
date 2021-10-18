@@ -84,7 +84,6 @@ Here you can find an overview of the repository, the directory structure and all
 -	/src/analysis = shows the R scripts for the analyses and the output
 -	/src/app = shows the R script for creating the Shiny App 
 -	/src/data-preparation = shows the data after being cleaned 
-![image](https://user-images.githubusercontent.com/90376248/137745539-b0d31cab-6e38-4773-8132-c044b9d30fb9.png)
 
 
 ## Running instructions
