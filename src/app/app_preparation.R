@@ -6,7 +6,7 @@
 library(readr)
 library(dplyr)
 
-setwd("C:/Users/tomka/OneDrive/Desktop/shinyapp")
+# setwd()
 
 # -- Loading the data
 ny <- read.csv("data/ny_pre_app.csv")
