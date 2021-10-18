@@ -105,8 +105,6 @@ Not all of the code can be run with basic R, for this additional packages are re
 - shiny
 - shinyWidgets
 
-## More resources
-(Point interested users to any related literature and/or documentation.)
 
 ## About
 This is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/) at Tilburg University
