@@ -96,6 +96,15 @@ To execute the project, the following programs need to be installed:
 
 RStudio can then be used to execute analyses on the data. 
 
+Not all of the code can be run with basic R, for this additional packages are required. The following packages need to be installed:
+- readr
+- dplyr
+- stringr
+- zoo
+- glmnet
+- shiny
+- shinyWidgets
+
 ## More resources
 (Point interested users to any related literature and/or documentation.)
 
