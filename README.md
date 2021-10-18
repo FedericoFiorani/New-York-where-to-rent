@@ -82,6 +82,15 @@ To execute this project, the following programs need to be installed:
 - [R](https://cran.r-project.org/) 
 - [RStudio](https://www.rstudio.com/products/rstudio/download/) 
 
+Not all of the code can be run with basic R, for this additional packages are required. The following packages need to be installed:
+- readr
+- dplyr
+- stringr
+- zoo
+- glmnet
+- shiny
+- shinyWidgets
+
 ## More resources
 (Point interested users to any related literature and/or documentation.)
 
