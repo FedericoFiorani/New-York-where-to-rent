@@ -2,9 +2,6 @@
 ## New York: where to rent?
 __Airbnb New York guide: What is the most convenient neighbourhood in the Big apple for you to stay and why?__
 
-![AirB&B logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png)
-
-
 ## Motivation
 New York is one of the biggest cities in the world, and all of its neighbourhoods have something unique to offer. For example, Manhattan shows the core of the city, but Brooklyn has some good secrets in store. So, how should someone decide where to book its Airbnb accommodation? 
 
@@ -64,46 +61,26 @@ We also summarized the differences between the boroughs regarding the host_is_su
 
 ## Shiny app
 
+By running the all the file contained in the src folder you get as an outup our app. In this interactive app you can filter differnt options depending on your necessities. The amenities that can be used as a filter as set to a 'default' option, it is the option that is most likely to appear in the accomodations.
+After filtering all the variables in the app you get as an output the list of all Airbnbs satisying those requisits. The list presents the accomodation from the one with the highest Lasso rating to the lowest.
+
+
 - default options for TV, Wifi and ... 
 - output is showed where first option is the one with the highest lasso rating
 - copy id in google with "airbnb + "..."", then you can visit the airbnb page of that certain listing
 
-If you copy the listing ID from the output of the Shiny App (first column), you can visit the Airbnb page of that specific listing by using Google in the following way:
-
-![image](https://user-images.githubusercontent.com/89907077/137747089-3eec2bb4-8f87-4bb9-9dab-78524080af85.png)
-
-
 ## Repository overview
+(Provide an overview of the directory structure and files.)
 
-Here you can find an overview of the repository, the directory structure and all the files: 
--	/code = shows the codes that are used in R to generate the analyses
--	/data/raw_data/summary = shows the raw datafiles that were taken from Inside AirBnb
--	/data/raw_data = shows the data about the neighbourhoods
--	/data = shows files … ? 
--	/makefile = shows files for the makefile 
--	/src/analysis = shows the R scripts for the analyses and the output
--	/src/app = shows the R script for creating the Shiny App 
--	/src/data-preparation = shows the data after being cleaned 
-
+## Data
+![AirB&B logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png)
 
 ## Running instructions
+(Explain to potential users how to run/replicate your workflow. Touch upon, if necessary, the required input data, which (secret) credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. Make use of subheaders where appropriate.)
 
-The dataset that is used for this project is available at InsideAirbnb: http://insideairbnb.com/get-the-data.html
-
-To execute the project, the following programs need to be installed:
+To execute this project, the following programs need to be installed:
 - [R](https://cran.r-project.org/) 
 - [RStudio](https://www.rstudio.com/products/rstudio/download/) 
-
-RStudio can then be used to execute analyses on the data. 
-
-Not all of the code can be run with basic R, for this additional packages are required. The following packages need to be installed:
-- readr
-- dplyr
-- stringr
-- zoo
-- glmnet
-- shiny
-- shinyWidgets
 
 ## More resources
 (Point interested users to any related literature and/or documentation.)
