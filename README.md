@@ -72,11 +72,14 @@ We also summarized the differences between the boroughs regarding the host_is_su
 ![AirB&B logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png)
 
 ## Running instructions
-(Explain to potential users how to run/replicate your workflow. Touch upon, if necessary, the required input data, which (secret) credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. Make use of subheaders where appropriate.)
 
-To execute this project, the following programs need to be installed:
+The dataset that is used for this project is available at http://insideairbnb.com/get-the-data.html
+
+To execute the project, the following programs need to be installed:
 - [R](https://cran.r-project.org/) 
 - [RStudio](https://www.rstudio.com/products/rstudio/download/) 
+
+RStudio can then be used to execute analyses on the data. 
 
 ## More resources
 (Point interested users to any related literature and/or documentation.)
