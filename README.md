@@ -104,7 +104,13 @@ Not all of the code can be run with basic R, for this additional packages are re
 - shiny
 - shinyWidgets
 
-To execute the all code manually you run  the folders in the src in the following order
+To execute all the code manually, the scripts stated below should be run in the order of top to bottom (with the working directory set to source file location):
+- download_data_directly.R
+- clean_data.R
+- analysis.R
+- (optional: visualizing_boroughs.R)
+- app_preparation.R
+- appcode.R
 
 ## About
 This is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/) at Tilburg University
