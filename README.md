@@ -61,6 +61,10 @@ We also summarized the differences between the boroughs regarding the host_is_su
 
 ## Shiny app
 
+- default options for TV, Wifi and ... 
+- output is showed where first option is the one with the highest lasso rating
+- copy id in google with "airbnb + "..."", then you can visit the airbnb page of that certain listing
+
 ## Repository overview
 (Provide an overview of the directory structure and files.)
 
