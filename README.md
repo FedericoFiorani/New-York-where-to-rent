@@ -2,6 +2,9 @@
 ## New York: where to rent?
 __Airbnb New York guide: What is the most convenient neighbourhood in the Big apple for you to stay and why?__
 
+![AirB&B logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png)
+
+
 ## Motivation
 New York is one of the biggest cities in the world, and all of its neighbourhoods have something unique to offer. For example, Manhattan shows the core of the city, but Brooklyn has some good secrets in store. So, how should someone decide where to book its Airbnb accommodation? 
 
@@ -78,9 +81,6 @@ Here you can find an overview of the repository, the directory structure and all
 -	/src/data-preparation = shows the data after being cleaned 
 ![image](https://user-images.githubusercontent.com/90376248/137745539-b0d31cab-6e38-4773-8132-c044b9d30fb9.png)
 
-
-## Data
-![AirB&B logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png)
 
 ## Running instructions
 
