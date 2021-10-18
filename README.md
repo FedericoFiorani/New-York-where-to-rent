@@ -66,7 +66,18 @@ We also summarized the differences between the boroughs regarding the host_is_su
 - copy id in google with "airbnb + "..."", then you can visit the airbnb page of that certain listing
 
 ## Repository overview
-(Provide an overview of the directory structure and files.)
+
+Here you can find an overview of the repository, the directory structure and all the files: 
+-	/code = shows the codes that are used in R to generate the analyses
+-	/data/raw_data/summary = shows the raw datafiles that were taken from Inside AirBnb
+-	/data/raw_data = shows the data about the neighbourhoods
+-	/data = shows files … ? 
+-	/makefile = shows files for the makefile 
+-	/src/analysis = shows the R scripts for the analyses and the output
+-	/src/app = shows the R script for creating the Shiny App 
+-	/src/data-preparation = shows the data after being cleaned 
+![image](https://user-images.githubusercontent.com/90376248/137745539-b0d31cab-6e38-4773-8132-c044b9d30fb9.png)
+
 
 ## Data
 ![AirB&B logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png)
