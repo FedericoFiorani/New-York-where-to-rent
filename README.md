@@ -65,11 +65,11 @@ We also summarized the differences between the boroughs regarding the host_is_su
 
 By running the the files contained in the src folder, you get as a Shiny App as output. In this interactive app you can filter different options depending on your necessities. The variables that can be filtered, are neighbourhood, amenities, price and number of accomodates. For the aminities Wifi, TV and AC have "Yes" as the default option, since these three options are commonly chosen and also commonly available. After filtering all the variables in the app you get a list of all Airbnbs satisfying your requests. The list shows the accomodations with the highest Lasso rating first to the ones with the lowest Lasso as last.
 
---> screenshot output app 
+![image](https://user-images.githubusercontent.com/89907077/137752042-c0e751e4-e089-480a-b571-2472fe8cc63c.png)
 
 The output of the app also gives the id that corresponds with that specific listing. If the user of the app is curious towards that listing, he/she can enter this ID number in Google, together with the text "AirBNB" 
 
---> Screenshot Google
+![image](https://user-images.githubusercontent.com/89907077/137752180-795c5bb9-ff1a-4840-a948-4de1b2c051f6.png)
 
 Using this, the user gets redirected to the Airbnb page of this host, showing the listing that was referred to in the app. 
 
