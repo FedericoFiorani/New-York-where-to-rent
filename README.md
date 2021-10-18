@@ -63,7 +63,7 @@ We also summarized the differences between the boroughs regarding the host_is_su
 
 ## Shiny app
 
-By running the the files contained in the src folder, you get as a Shiny App as output. In this interactive app you can filter different options depending on your necessities. The variables that can be filtered, are neighbourhood, amenities, price and number of accomodates. For the aminities Wifi, TV and AC have "Yes" as the default option, since these three options are commonly chosen and also commonly available. After filtering all the variables in the app you get a list of all Airbnbs satisfying your requests. The list shows the accomodations with the highest Lasso rating first to the ones with the lowest Lasso as last.
+By running the files contained in the src folder, you get a Shiny App as output. In this interactive app you can filter different options depending on your necessities. The variables that can be filtered, are neighbourhood, amenities, price and number of accomodates. For the aminities Wifi, TV and AC have "Yes" as the default option, since these three options are commonly chosen and also commonly available. After filtering all the variables in the app you get a list of all Airbnbs satisfying your requests. The list shows the accomodations with the highest Lasso rating first to the ones with the lowest Lasso as last.
 
 ![image](https://user-images.githubusercontent.com/89907077/137752042-c0e751e4-e089-480a-b571-2472fe8cc63c.png)
 
@@ -80,14 +80,13 @@ The output of the filtered options can also be downloaded as a csv file.
 
 Here you can find an overview of the repository, the directory structure and all the files: 
 
--	/code = shows the codes that are used in R to generate the analyses
--	/data/raw_data/summary = shows the raw datafiles that were taken from Inside AirBnb
--	/data/raw_data = shows the data about the neighbourhoods
--	/data = shows files … ? 
--	/makefile = shows files for the makefile 
--	/src/analysis = shows the R scripts for the analyses and the output
--	/src/app = shows the R script for creating the Shiny App 
--	/src/data-preparation = shows the data after being cleaned 
+-	/code shows the codes that are used in R to generate the analyses
+-	/data/raw_data/summary shows the raw datafiles that were taken from Inside AirBnb
+-	/data/raw_data shows the data about the neighbourhoods
+-	/src/makefile is a folder where all the process of our research (from downloading the data to the generation of the app) can be executed automatically with make
+-	/src/data-preparation shows the data after being cleaned 
+-	/src/analysis  shows the R scripts for the analyses and the output
+-	/src/app shows the R script for creating the Shiny App 
 
 
 ## Running instructions
@@ -105,6 +104,7 @@ Not all of the code can be run with basic R, for this additional packages are re
 - shiny
 - shinyWidgets
 
+To execute the all code manually you run  the folders in the src in the following order
 
 ## About
 This is the repository for the course [Data Preparation and Workflow Management](https://dprep.hannesdatta.com/) at Tilburg University
