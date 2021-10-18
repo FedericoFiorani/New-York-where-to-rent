@@ -15,7 +15,7 @@ The goal of this project is to generate a list of the most convenient areas of t
 - the Bronx 
 - Staten Island
 
-We will compile different rankings, based on price, quality and the two together (also known as the value-for-money concept). The project will be executed for both the 5 nieghbourhoods, and the smaller ones within those 5 areas.
+We will compile different rankings, based on price, quality and the two together (also known as the value-for-money concept). The project will be executed for both the 5 neighbourhoods, and the smaller ones within those 5 areas.
 
 
 ## Method
