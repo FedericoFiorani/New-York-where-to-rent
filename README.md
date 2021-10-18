@@ -106,7 +106,7 @@ Not all of the code can be run with basic R, for this additional packages are re
 
 To execute all the code manually, the scripts stated below should be run in the order of top to bottom (with the working directory set to source file location):
 - download_data_directly.R
-- clean_data.R
+- data.cleaning.R
 - analysis.R
 - (optional: visualizing_boroughs.R)
 - app_preparation.R
