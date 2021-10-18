@@ -88,7 +88,7 @@ Here you can find an overview of the repository, the directory structure and all
 
 ## Running instructions
 
-The dataset that is used for this project is available at http://insideairbnb.com/get-the-data.html
+The dataset that is used for this project is available at [InsideAirBnb] (http://insideairbnb.com/get-the-data.html)
 
 To execute the project, the following programs need to be installed:
 - [R](https://cran.r-project.org/) 
