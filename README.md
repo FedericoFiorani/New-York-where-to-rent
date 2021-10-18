@@ -68,7 +68,7 @@ We also summarized the differences between the boroughs regarding the host_is_su
 - output is showed where first option is the one with the highest lasso rating
 - copy id in google with "airbnb + "..."", then you can visit the airbnb page of that certain listing
 
-If you copy the listing ID from the output of the Shiny App, you can visit the Airbnb page of that specific listing by using Google in the following way:
+If you copy the listing ID from the output of the Shiny App (first column), you can visit the Airbnb page of that specific listing by using Google in the following way:
 
 ![image](https://user-images.githubusercontent.com/89907077/137747089-3eec2bb4-8f87-4bb9-9dab-78524080af85.png)
 
