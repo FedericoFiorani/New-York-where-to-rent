@@ -2,6 +2,8 @@
 ## New York: where to rent?
 __Airbnb New York guide: What is the most convenient neighbourhood in the Big apple for you to stay and why?__
 
+![AirB&B logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png)
+
 ## Motivation
 New York is one of the biggest cities in the world, and all of its neighbourhoods have something unique to offer. For example, Manhattan shows the core of the city, but Brooklyn has some good secrets in store. So, how should someone decide where to book its Airbnb accommodation? 
 
@@ -61,22 +63,34 @@ We also summarized the differences between the boroughs regarding the host_is_su
 
 ## Shiny app
 
-By running the all the file contained in the src folder you get as an outup our app. In this interactive app you can filter differnt options depending on your necessities. The amenities that can be used as a filter as set to a 'default' option, it is the option that is most likely to appear in the accomodations.
-After filtering all the variables in the app you get as an output the list of all Airbnbs satisying those requisits. The list presents the accomodation from the one with the highest Lasso rating to the lowest.
+By running the the files contained in the src folder, you get as a Shiny App as output. In this interactive app you can filter different options depending on your necessities. The variables that can be filtered, are neighbourhood, amenities, price and number of accomodates. For the aminities Wifi, TV and AC have "Yes" as the default option, since these three options are commonly chosen and also commonly available. After filtering all the variables in the app you get a list of all Airbnbs satisfying your requests. The list shows the accomodations with the highest Lasso rating first to the ones with the lowest Lasso as last.
 
+--> screenshot output app 
 
-- default options for TV, Wifi and ... 
-- output is showed where first option is the one with the highest lasso rating
-- copy id in google with "airbnb + "..."", then you can visit the airbnb page of that certain listing
+The output of the app also gives the id that corresponds with that specific listing. If the user of the app is curious towards that listing, he/she can enter this ID number in Google, together with the text "AirBNB" 
+
+--> Screenshot Google
+
+Using this, the user gets redirected to the Airbnb page of this host, showing the listing that was referred to in the app. 
+
+The output of the filtered options can also be downloaded as a csv file. 
+
 
 ## Repository overview
-(Provide an overview of the directory structure and files.)
 
-## Data
-![AirB&B logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png)
+Here you can find an overview of the repository, the directory structure and all the files: 
+
+-	/code = shows the codes that are used in R to generate the analyses
+-	/data/raw_data/summary = shows the raw datafiles that were taken from Inside AirBnb
+-	/data/raw_data = shows the data about the neighbourhoods
+-	/data = shows files … ? 
+-	/makefile = shows files for the makefile 
+-	/src/analysis = shows the R scripts for the analyses and the output
+-	/src/app = shows the R script for creating the Shiny App 
+-	/src/data-preparation = shows the data after being cleaned 
+
 
 ## Running instructions
-(Explain to potential users how to run/replicate your workflow. Touch upon, if necessary, the required input data, which (secret) credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. Make use of subheaders where appropriate.)
 
 To execute this project, the following programs need to be installed:
 - [R](https://cran.r-project.org/) 
